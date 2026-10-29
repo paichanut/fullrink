@@ -298,3 +298,4 @@ p { margin: 0 0 var(--s-16); }
 .r3-label:hover small, .r3-label.is-active small { display: block; }
 .r3-label.is-active { border-color: var(--secondary); background: var(--surface); }
 @media (max-width: 960px) { .r3 { height: 52vh; min-height: 340px; } }
+@media (max-width: 600px) { .r3-label span, .r3-label small { display: none; } .r3-label { padding: 2px 6px; } .r3-label b { grid-row: auto; padding: 0; } }
