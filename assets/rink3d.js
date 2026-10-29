@@ -246,16 +246,18 @@ for (const s of spots) {
 
 // ---------- camera moves ----------
 const OVERVIEW = { pos: [50, 60, 78], target: [-24, 0, 2] };
+const OVERVIEW_NARROW = { pos: [62, 74, 96], target: [-2, 0, 2] };
+const overview = () => (host.clientWidth < 960 ? OVERVIEW_NARROW : OVERVIEW);
 let fly = null;
 function flyTo(id) {
   const s = spots.find((x) => x.id === id);
-  const to = s ? { pos: s.cam[0], target: s.cam[1] } : OVERVIEW;
+  const to = s ? { pos: s.cam[0], target: s.cam[1] } : overview();
   fly = { from: { pos: camera.position.clone(), target: controls.target.clone() }, to: { pos: new THREE.Vector3(...to.pos), target: new THREE.Vector3(...to.target) }, t: 0 };
   controls.autoRotate = false;
   document.querySelectorAll('.r3-panel [data-fly]').forEach((b) => b.classList.toggle('is-active', b.dataset.fly === (s ? id : 'overview')));
   labelObjs.forEach((o) => o.element.classList.toggle('is-active', !!s && o.element.dataset.id === s.id));
 }
-camera.position.set(...OVERVIEW.pos); controls.target.set(...OVERVIEW.target);
+camera.position.set(...overview().pos); controls.target.set(...overview().target);
 
 // ---------- UI wiring ----------
 document.querySelectorAll('[data-fly]').forEach((b) => b.addEventListener('click', () => flyTo(b.dataset.fly)));
