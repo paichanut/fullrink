@@ -254,3 +254,25 @@ p { margin: 0 0 1em; }
 .hero h1 { font-size: clamp(2.5rem, 5.2vw, 4.6rem); }
 .stage .tv { width: 72%; }
 .phone.a { right: 0; }
+
+/* Refinement pass */
+.stage { min-height: 640px; }
+.stage .tv { width: 66%; top: 0; }
+.phone.a { right: 0; top: 0; width: 32%; }
+.phone.b { left: 8%; right: auto; top: 250px; width: 28%; }
+.phone.b .phone-label { left: 0; bottom: -42px; }
+.showcase { gap: clamp(32px, 5vw, 56px); }
+.show-media { min-height: 0; }
+.show-media .phone { width: min(230px, 64%); }
+.pitch article::after { left: 0; top: 26px; bottom: auto; width: 4px; height: 44px; border-radius: 0 4px 4px 0; }
+@media (max-width: 960px) {
+  .stage { min-height: 0; }
+  .stage .phone { left: auto; top: auto; width: 100%; }
+  .phone.b { left: auto; }
+}
+@media (max-width: 600px) {
+  .nav nav .btn-small { display: none; }
+  .nav nav { gap: 12px; }
+  .tv figcaption { position: static; padding: 8px 10px; background: var(--surface); color: var(--text-2); text-shadow: none; }
+  .hero h1 { font-size: 2.4rem; }
+}
