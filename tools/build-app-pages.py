@@ -202,10 +202,7 @@ def brand_names(doc: str) -> str:
     import re
 
     def fix(m):
-        t = m.group(0)
-        for a, b in DISPLAY_NAMES:
-            t = t.replace(a, b)
-        return t
+        return fix_attr(m.group(0))
 
     doc = re.sub(r">[^<]+<", fix, doc)
     doc = re.sub(r'(content="[^"]*")', lambda m: fix_attr(m.group(1)), doc)
@@ -213,8 +210,11 @@ def brand_names(doc: str) -> str:
 
 
 def fix_attr(t: str) -> str:
+    import re
+
+    # Whole words only, and never inside dotted identifiers such as th.co.aftershoot.liveby
     for a, b in DISPLAY_NAMES:
-        t = t.replace(a, b)
+        t = re.sub(r"(?<![\w.])" + re.escape(a) + r"(?![\w.])", b, t)
     return t
 
 
@@ -277,7 +277,7 @@ def page(app: dict) -> str:
   <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Thai:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
