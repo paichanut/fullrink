@@ -22,18 +22,64 @@ APPS = [
         ),
         "features": [
             "Stream live from the phone camera to your audience",
-            "Hockey scoreboard overlay: period, clock, score and penalties",
+            "Hockey scoreboard overlay: period, clock, score, shots on goal and penalties",
             "Control the scoreboard from a second phone, anywhere with internet",
-            "Overlays for images, video clips, text and music",
-            "Replays on the live stream",
-            "Free, with every feature included",
+            "Overlays for images, looping video, text, web pages and music",
+            "Instant replay of the last 10, 20 or 30 seconds, in slow motion",
+            "Stream to YouTube, Facebook, Instagram, your own RTMP/RTSP, OBS and local recording at once",
+            "Free, with every feature included: no subscription, no watermark",
         ],
         "links": [
-            {"label": "Open the liveby website", "href": "https://live.aftershoot.co.th/", "primary": True},
-            {"label": "Join the test on Google Play", "href": "https://play.google.com/apps/testing/th.co.aftershoot.liveby"},
+            {"label": "Join the test on Google Play", "href": "https://play.google.com/apps/testing/th.co.aftershoot.liveby", "primary": True},
+            {"label": "Original site: live.aftershoot.co.th", "href": "https://live.aftershoot.co.th/"},
         ],
         "shots": [],
         "status": "In testing on Google Play (package th.co.aftershoot.liveby).",
+        # Content carried over from live.aftershoot.co.th (Thai), kept in its own language.
+        "th_tagline": "แอพไลฟ์สดสำหรับกีฬาจริง — สกอร์บอร์ด ควบคุมระยะไกล รีเพลย์ ทุกอย่างฟรี",
+        "feature_cards": [
+            ("สกอร์บอร์ดในภาพ", "ฮอกกี้เต็มรูปแบบ: เวลา พีเรียด สกอร์ ชอตออนโกล เพนัลตี้ โลโก้ทีม ปรับขนาด/ตำแหน่งได้ และเปลี่ยนคำอธิบายให้ใช้กับกีฬาอื่นได้"),
+            ("คุมสกอร์จากอีกเครื่อง", "เปิดหน้าเว็บควบคุมจากมือถือ/โน้ตบุ๊กเครื่องอื่น ทั้งในวง WiFi และผ่านอินเทอร์เน็ต — คนคุมสกอร์ไม่ต้องแตะกล้อง"),
+            ("ซิงก์เวลากับบอร์ดจริง", "ส่องกล้องไปที่บอร์ดในลาน แล้วให้แอพอ่านเวลาเอง นาฬิกาบนภาพเดินตรงกับในสนาม"),
+            ("รีเพลย์ทันที", "ย้อนดู 10/20/30 วินาทีที่ผ่านมา เล่นช้า x0.5 พร้อมป้าย REPLAY ให้คนดูรู้"),
+            ("ใส่ภาพ วิดีโอ ข้อความ เว็บ", "โลโก้ผู้สนับสนุน วิดีโอวนลูป ข้อความบนจอ หน้าเว็บ — ลากนิ้วย้าย หนีบสองนิ้วย่อขยาย ตัดขอบได้"),
+            ("เพลงเข้าสตรีม", "ใส่เพลงจากเครื่อง คนดูได้ยิน แต่ลำโพงมือถือเงียบ ปรับระดับเสียงได้"),
+            ("ไลฟ์หลายที่พร้อมกัน", "YouTube, Facebook, Instagram, RTMP/RTSP ของคุณเอง, OBS และอัดลงเครื่องไปพร้อมกัน"),
+            ("โหมด Clean feed", "ปุ่มเดียวย่อภาพให้ไปอยู่มุมจอ ปุ่มควบคุมทั้งหมดออกไปอยู่นอกกรอบ — เห็นชัดว่าคนดูเห็นอะไร"),
+        ],
+        "notice": ("ทุกฟีเจอร์เปิดใช้ฟรี", "ไม่มีสมาชิกรายเดือน ไม่มีลายน้ำ ไม่มีหน้าอัปเกรด ต่างจากแอพไลฟ์อื่นที่ล็อกการใส่รูป/วิดีโอไว้หลังค่าสมาชิก"),
+        "steps": [
+            ("เข้าร่วมทดสอบ", "เปิดลิงก์ทดสอบบน Play Store ด้วยบัญชี Google ที่ลงทะเบียนไว้ แล้วกดยอมรับ"),
+            ("ติดตั้งจาก Play Store", "หลังกดเข้าร่วมแล้ว กดติดตั้งจากหน้าเดียวกัน"),
+            ("เลือกปลายทาง", "ติ๊ก YouTube/Facebook/บันทึกลงเครื่อง แล้วกด START"),
+            ("ส่งลิงก์ให้คนคุมสกอร์", "ป้ายล่างขวาคือที่อยู่หน้าควบคุม แตะเพื่อคัดลอก (ตั้ง Telegram ไว้ในหน้าตั้งค่าให้ส่งลิงก์อัตโนมัติก็ได้)"),
+        ],
+        "changelog": [
+            ("3.15.0 — ส่งลิงก์เข้า Telegram", [
+                "ตั้งค่า → Scoreboard: ใส่ Telegram bot token แล้วแอพส่งลิงก์หน้าควบคุมเข้าแชทให้เอง (ลิงก์ในวงทันทีที่เปิดแอพ ลิงก์อินเทอร์เน็ตเมื่อพร้อม)",
+                "หน้า About บอกเวอร์ชันที่ใช้อยู่ พร้อมประวัติการอัปเดต",
+            ]),
+            ("3.14.x — จัดวางด้วยนิ้ว + Clean feed", [
+                "แตะเลเยอร์แล้วลากย้าย/หนีบซูมบนภาพจริง พร้อมปุ่มหมุน ตัดขอบ สลับชั้น ลบ",
+                "ปุ่ม Clean สลับภาพเต็มจอ ↔ กรอบ 16:9 ที่ไม่มีปุ่มบัง",
+            ]),
+            ("3.13.x — เพลง ตัดขอบ และปุ่มเพิ่มที่หาเจอ", [
+                "ใส่เพลงเข้าสตรีม ปรับเสียงได้",
+                "ตัดขอบรูป/ข้อความ/เว็บเป็นเปอร์เซ็นต์",
+                "ทุกแท็บมีแถบเพิ่มเต็มความกว้าง",
+            ]),
+            ("3.12.x — เสถียรภาพ", [
+                "กราฟิกล้นแล้วไม่ดับ — ตัดเลเยอร์เสริมแล้วสตรีมต่อ",
+                "แก้ความละเอียดถูกตั้งเป็นค่าสูงสุดเองจนเครื่องเก่าดับ",
+            ]),
+            ("3.9–3.11 — ปุ่มจริง รีเพลย์ และลิงก์อินเทอร์เน็ต", [
+                "ไฟฉาย ความเป็นส่วนตัว แกลเลอรี พักการอัด",
+                "รีเพลย์ สโลว์โมชัน · Pro camera (EV/WB/โฟกัส)",
+                "ลิงก์ควบคุมผ่านเน็ตใช้งานได้จริง ไม่ตายตอนจอดับ ต่อใหม่เอง",
+                "รองรับ Android 16 (targetSdk 36)",
+            ]),
+        ],
+        "footnote": "หน้าควบคุมสกอร์บอร์ดของแต่ละงานจะอยู่ที่ลิงก์ที่แอพสร้างให้ ไม่ใช่หน้านี้",
     },
     {
         "slug": "dejavucam",
@@ -165,6 +211,26 @@ def page(app: dict) -> str:
         f'<a href="{s}"{" aria-current=page" if s == app["slug"] else ""}>{e(a["name"])}</a>\n'
         for s, a in zip(NAV_ORDER, APPS)
     )
+    th_tagline = f'<p class="lead th">{e(app["th_tagline"])}</p>' if app.get("th_tagline") else ""
+    extra = ""
+    if app.get("feature_cards"):
+        cards = "".join(
+            f'<article class="card"><h3>{e(t)}</h3><p>{e(d)}</p></article>\n' for t, d in app["feature_cards"]
+        )
+        notice = ""
+        if app.get("notice"):
+            notice = f'<p class="notice"><strong>{e(app["notice"][0])}</strong> — {e(app["notice"][1])}</p>'
+        extra += f'<section class="section"><div class="container"><h2>ทำอะไรได้บ้าง</h2><div class="cards">{cards}</div>{notice}</div></section>\n'
+    if app.get("steps"):
+        steps = "".join(f"<li><strong>{e(t)}</strong> — {e(d)}</li>\n" for t, d in app["steps"])
+        extra += f'<section class="section section-alt" id="how"><div class="container"><h2>เริ่มใช้งาน</h2><ol class="steps-list">{steps}</ol></div></section>\n'
+    if app.get("changelog"):
+        log = "".join(
+            f"<h3>{e(t)}</h3><ul>" + "".join(f"<li>{e(b)}</li>" for b in bullets) + "</ul>\n"
+            for t, bullets in app["changelog"]
+        )
+        extra += f'<section class="section"><div class="container"><h2>อัปเดตล่าสุด</h2><div class="changelog">{log}</div></div></section>\n'
+    footnote = f'<p class="muted small">{e(app["footnote"])}</p>' if app.get("footnote") else ""
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -209,12 +275,14 @@ def page(app: dict) -> str:
           <div>
             <h1>{name}</h1>
             <p class="lead">{e(app["tagline"])}</p>
+            {th_tagline}
           </div>
         </div>
         <p class="lead app-summary">{e(app["summary"])}</p>
         <div class="hero-actions">
 {links}        </div>
         <p class="muted small">{e(app["status"])}</p>
+        {footnote}
       </div>
     </section>
 
@@ -233,6 +301,7 @@ def page(app: dict) -> str:
       </div>
     </section>
 
+    {extra}
     {shots}
 
     <section class="section cta">
