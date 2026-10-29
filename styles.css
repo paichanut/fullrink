@@ -201,3 +201,9 @@ p { margin: 0 0 1em; }
 .changelog h3 { font-size: 1rem; color: var(--ice); margin: 18px 0 6px; }
 .changelog h3:first-child { margin-top: 0; }
 .changelog ul { margin: 0; padding-left: 20px; color: var(--text-2); font-size: 0.95rem; }
+
+/* Brand line on cards */
+.card .by { margin: -6px 0 10px; font-family: var(--font-head); font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ice); }
+.eyebrow a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.app-head .by { margin: 0 0 8px; font-family: var(--font-head); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ice); }
+.app-head .by a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }

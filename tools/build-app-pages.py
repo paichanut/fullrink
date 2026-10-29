@@ -187,6 +187,36 @@ APPS = [
 
 NAV_ORDER = [a["slug"] for a in APPS]
 
+# Product names shown on the site, applied to text only (slugs and hrefs stay lowercase).
+DISPLAY_NAMES = [
+    ("liveby scoreboard", "Live By Scoreboard"),
+    ("analytic cam", "Analytic Cam"),
+    ("mobileVAR", "Mobile VAR"),
+    ("dejavucam", "DejaVu Cam"),
+    ("liveby", "Live By"),
+]
+DEVELOPER_URL = "https://app.aftershoot.co.th/"
+
+
+def brand_names(doc: str) -> str:
+    import re
+
+    def fix(m):
+        t = m.group(0)
+        for a, b in DISPLAY_NAMES:
+            t = t.replace(a, b)
+        return t
+
+    doc = re.sub(r">[^<]+<", fix, doc)
+    doc = re.sub(r'(content="[^"]*")', lambda m: fix_attr(m.group(1)), doc)
+    return doc
+
+
+def fix_attr(t: str) -> str:
+    for a, b in DISPLAY_NAMES:
+        t = t.replace(a, b)
+    return t
+
 
 def e(s: str) -> str:
     return html.escape(s, quote=True)
@@ -261,6 +291,7 @@ def page(app: dict) -> str:
         <a href="../#apps">Apps</a>
         <a href="../#how">How it fits</a>
         <a href="../#contact">Contact</a>
+        <a href="{DEVELOPER_URL}" target="_blank" rel="noopener">AfterShoot</a>
         <a class="btn btn-small" href="../#apps">All apps</a>
       </nav>
     </div>
@@ -274,6 +305,7 @@ def page(app: dict) -> str:
           <img class="app-icon" src="{e(app["icon"])}" alt="" width="96" height="96">
           <div>
             <h1>{name}</h1>
+            <p class="by">by FullRink · developed by <a href="{DEVELOPER_URL}" target="_blank" rel="noopener">AfterShoot</a></p>
             <p class="lead">{e(app["tagline"])}</p>
             {th_tagline}
           </div>
@@ -318,7 +350,7 @@ def page(app: dict) -> str:
 
   <footer class="site-footer">
     <div class="container footer-bottom">
-      <span class="muted small">&copy; <span id="year">2026</span> FullRink. All rights reserved.</span>
+      <span class="muted small">&copy; <span id="year">2026</span> FullRink · <a href="{DEVELOPER_URL}" target="_blank" rel="noopener">AfterShoot</a>. All rights reserved. FullRink is the app brand of AfterShoot.</span>
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
@@ -331,7 +363,7 @@ def main() -> None:
     OUT.mkdir(exist_ok=True)
     for app in APPS:
         path = OUT / f"{app['slug']}.html"
-        path.write_text(page(app), encoding="utf-8", newline="\n")
+        path.write_text(brand_names(page(app)), encoding="utf-8", newline="\n")
         print("wrote", path.relative_to(ROOT))
 
 
