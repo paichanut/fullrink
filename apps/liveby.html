@@ -132,7 +132,7 @@
     document.querySelectorAll('.theme-toggle').forEach(function (b) {
       b.addEventListener('click', function () {
         var r = document.documentElement;
-        var cur = r.getAttribute('data-theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        var cur = r.getAttribute('data-theme') || 'dark';
         var next = cur === 'light' ? 'dark' : 'light';
         r.setAttribute('data-theme', next);
         try { localStorage.setItem('fullrink-theme', next); } catch (e) {}
