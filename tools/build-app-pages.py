@@ -35,51 +35,50 @@ APPS = [
         ],
         "shots": [],
         "status": "In testing on Google Play (package th.co.aftershoot.liveby).",
-        # Content carried over from live.aftershoot.co.th (Thai), kept in its own language.
-        "th_tagline": "แอพไลฟ์สดสำหรับกีฬาจริง — สกอร์บอร์ด ควบคุมระยะไกล รีเพลย์ ทุกอย่างฟรี",
+        # Content carried over from live.aftershoot.co.th, translated to English.
         "feature_cards": [
-            ("สกอร์บอร์ดในภาพ", "ฮอกกี้เต็มรูปแบบ: เวลา พีเรียด สกอร์ ชอตออนโกล เพนัลตี้ โลโก้ทีม ปรับขนาด/ตำแหน่งได้ และเปลี่ยนคำอธิบายให้ใช้กับกีฬาอื่นได้"),
-            ("คุมสกอร์จากอีกเครื่อง", "เปิดหน้าเว็บควบคุมจากมือถือ/โน้ตบุ๊กเครื่องอื่น ทั้งในวง WiFi และผ่านอินเทอร์เน็ต — คนคุมสกอร์ไม่ต้องแตะกล้อง"),
-            ("ซิงก์เวลากับบอร์ดจริง", "ส่องกล้องไปที่บอร์ดในลาน แล้วให้แอพอ่านเวลาเอง นาฬิกาบนภาพเดินตรงกับในสนาม"),
-            ("รีเพลย์ทันที", "ย้อนดู 10/20/30 วินาทีที่ผ่านมา เล่นช้า x0.5 พร้อมป้าย REPLAY ให้คนดูรู้"),
-            ("ใส่ภาพ วิดีโอ ข้อความ เว็บ", "โลโก้ผู้สนับสนุน วิดีโอวนลูป ข้อความบนจอ หน้าเว็บ — ลากนิ้วย้าย หนีบสองนิ้วย่อขยาย ตัดขอบได้"),
-            ("เพลงเข้าสตรีม", "ใส่เพลงจากเครื่อง คนดูได้ยิน แต่ลำโพงมือถือเงียบ ปรับระดับเสียงได้"),
-            ("ไลฟ์หลายที่พร้อมกัน", "YouTube, Facebook, Instagram, RTMP/RTSP ของคุณเอง, OBS และอัดลงเครื่องไปพร้อมกัน"),
-            ("โหมด Clean feed", "ปุ่มเดียวย่อภาพให้ไปอยู่มุมจอ ปุ่มควบคุมทั้งหมดออกไปอยู่นอกกรอบ — เห็นชัดว่าคนดูเห็นอะไร"),
+            ("Scoreboard in the picture", "Full hockey board: clock, period, score, shots on goal, penalties, team logos. Resize and reposition it, or relabel it for other sports."),
+            ("Score control from another device", "Open the control page on any phone or laptop, on the rink Wi-Fi or over the internet. The scorekeeper never touches the camera."),
+            ("Clock synced to the real board", "Point the camera at the rink's scoreboard and the app reads the time, so the on-screen clock matches the arena."),
+            ("Instant replay", "Rewind the last 10, 20 or 30 seconds, play at 0.5x, with a REPLAY badge so viewers know."),
+            ("Images, video, text, web pages", "Sponsor logos, looping video, on-screen text, web pages. Drag to move, pinch to resize, crop as needed."),
+            ("Music on the stream", "Play music from the phone into the stream. Viewers hear it, the phone speaker stays silent, volume is adjustable."),
+            ("Stream everywhere at once", "YouTube, Facebook, Instagram, your own RTMP/RTSP, OBS, and a local recording, all at the same time."),
+            ("Clean feed mode", "One button shrinks the picture into a corner and moves every control outside the frame, so you see exactly what viewers see."),
         ],
-        "notice": ("ทุกฟีเจอร์เปิดใช้ฟรี", "ไม่มีสมาชิกรายเดือน ไม่มีลายน้ำ ไม่มีหน้าอัปเกรด ต่างจากแอพไลฟ์อื่นที่ล็อกการใส่รูป/วิดีโอไว้หลังค่าสมาชิก"),
+        "notice": ("Every feature is free", "No monthly subscription, no watermark, no upgrade screen, unlike live apps that lock images and video behind a paywall."),
         "steps": [
-            ("เข้าร่วมทดสอบ", "เปิดลิงก์ทดสอบบน Play Store ด้วยบัญชี Google ที่ลงทะเบียนไว้ แล้วกดยอมรับ"),
-            ("ติดตั้งจาก Play Store", "หลังกดเข้าร่วมแล้ว กดติดตั้งจากหน้าเดียวกัน"),
-            ("เลือกปลายทาง", "ติ๊ก YouTube/Facebook/บันทึกลงเครื่อง แล้วกด START"),
-            ("ส่งลิงก์ให้คนคุมสกอร์", "ป้ายล่างขวาคือที่อยู่หน้าควบคุม แตะเพื่อคัดลอก (ตั้ง Telegram ไว้ในหน้าตั้งค่าให้ส่งลิงก์อัตโนมัติก็ได้)"),
+            ("Join the test", "Open the Play Store testing link with the Google account you registered, then accept."),
+            ("Install from the Play Store", "After joining, install from the same page."),
+            ("Pick destinations", "Tick YouTube, Facebook or local recording, then press START."),
+            ("Send the link to the scorekeeper", "The badge at the bottom right is the control page address; tap to copy it. You can also set up Telegram in Settings to send the link automatically."),
         ],
         "changelog": [
-            ("3.15.0 — ส่งลิงก์เข้า Telegram", [
-                "ตั้งค่า → Scoreboard: ใส่ Telegram bot token แล้วแอพส่งลิงก์หน้าควบคุมเข้าแชทให้เอง (ลิงก์ในวงทันทีที่เปิดแอพ ลิงก์อินเทอร์เน็ตเมื่อพร้อม)",
-                "หน้า About บอกเวอร์ชันที่ใช้อยู่ พร้อมประวัติการอัปเดต",
+            ("3.15.0 — Control link via Telegram", [
+                "Settings → Scoreboard: add a Telegram bot token and the app sends the control-page link to your chat (local link as soon as the app opens, internet link when ready).",
+                "The About page shows the running version with the update history.",
             ]),
-            ("3.14.x — จัดวางด้วยนิ้ว + Clean feed", [
-                "แตะเลเยอร์แล้วลากย้าย/หนีบซูมบนภาพจริง พร้อมปุ่มหมุน ตัดขอบ สลับชั้น ลบ",
-                "ปุ่ม Clean สลับภาพเต็มจอ ↔ กรอบ 16:9 ที่ไม่มีปุ่มบัง",
+            ("3.14.x — Arrange by touch + Clean feed", [
+                "Tap a layer and drag or pinch it on the live picture, with rotate, crop, reorder and delete.",
+                "Clean button switches between full screen and a 16:9 frame with no controls in the way.",
             ]),
-            ("3.13.x — เพลง ตัดขอบ และปุ่มเพิ่มที่หาเจอ", [
-                "ใส่เพลงเข้าสตรีม ปรับเสียงได้",
-                "ตัดขอบรูป/ข้อความ/เว็บเป็นเปอร์เซ็นต์",
-                "ทุกแท็บมีแถบเพิ่มเต็มความกว้าง",
+            ("3.13.x — Music, crop, and an Add button you can find", [
+                "Music on the stream with volume control.",
+                "Crop images, text and web layers by percentage.",
+                "Every tab has a full-width Add bar.",
             ]),
-            ("3.12.x — เสถียรภาพ", [
-                "กราฟิกล้นแล้วไม่ดับ — ตัดเลเยอร์เสริมแล้วสตรีมต่อ",
-                "แก้ความละเอียดถูกตั้งเป็นค่าสูงสุดเองจนเครื่องเก่าดับ",
+            ("3.12.x — Stability", [
+                "Graphics overflow no longer crashes the app; extra layers are dropped and the stream continues.",
+                "Fixed resolution being forced to maximum, which crashed older phones.",
             ]),
-            ("3.9–3.11 — ปุ่มจริง รีเพลย์ และลิงก์อินเทอร์เน็ต", [
-                "ไฟฉาย ความเป็นส่วนตัว แกลเลอรี พักการอัด",
-                "รีเพลย์ สโลว์โมชัน · Pro camera (EV/WB/โฟกัส)",
-                "ลิงก์ควบคุมผ่านเน็ตใช้งานได้จริง ไม่ตายตอนจอดับ ต่อใหม่เอง",
-                "รองรับ Android 16 (targetSdk 36)",
+            ("3.9–3.11 — Real buttons, replay and internet links", [
+                "Torch, privacy, gallery, pause recording.",
+                "Replay and slow motion · Pro camera (EV / WB / focus).",
+                "Internet control link works reliably, survives the screen turning off, reconnects on its own.",
+                "Android 16 support (targetSdk 36).",
             ]),
         ],
-        "footnote": "หน้าควบคุมสกอร์บอร์ดของแต่ละงานจะอยู่ที่ลิงก์ที่แอพสร้างให้ ไม่ใช่หน้านี้",
+        "footnote": "The scoreboard control page for each event is at the link the app generates, not on this page.",
     },
     {
         "slug": "dejavucam",
@@ -183,6 +182,31 @@ APPS = [
         "shots": [],
         "status": "Live on the web.",
     },
+    {
+        "slug": "gamemap",
+        "name": "GameMap",
+        "tagline": "See the game from above",
+        "icon": "../assets/logo/fullrink-mark.svg",
+        "summary": (
+            "GameMap is a browser tool for hockey tracking: load a game clip, mark where each player is on a top-down rink "
+            "as the video plays, and get movement data back. Nothing to install, runs in the browser, works with the clips "
+            "you already record with Live By or DejaVu Cam."
+        ),
+        "features": [
+            "Top-down rink view synced to your video",
+            "Set up both teams, colours and players",
+            "Mark real positions by hand, frame by frame",
+            "Movement data for every player you track",
+            "Runs in the browser, no install",
+        ],
+        "links": [
+            {"label": "Open GameMap", "href": "https://fullrink.com/gamemap/", "primary": True},
+        ],
+        "shots": [
+            ("../assets/apps/gamemap/gamemap-web.jpg", "GameMap in the browser"),
+        ],
+        "status": "Live on the web (early version, tracking lab).",
+    },
 ]
 
 NAV_ORDER = [a["slug"] for a in APPS]
@@ -202,10 +226,7 @@ def brand_names(doc: str) -> str:
     import re
 
     def fix(m):
-        t = m.group(0)
-        for a, b in DISPLAY_NAMES:
-            t = t.replace(a, b)
-        return t
+        return fix_attr(m.group(0))
 
     doc = re.sub(r">[^<]+<", fix, doc)
     doc = re.sub(r'(content="[^"]*")', lambda m: fix_attr(m.group(1)), doc)
@@ -213,8 +234,11 @@ def brand_names(doc: str) -> str:
 
 
 def fix_attr(t: str) -> str:
+    import re
+
+    # Whole words only, and never inside dotted identifiers such as th.co.aftershoot.liveby
     for a, b in DISPLAY_NAMES:
-        t = t.replace(a, b)
+        t = re.sub(r"(?<![\w.])" + re.escape(a) + r"(?![\w.])", b, t)
     return t
 
 
@@ -250,16 +274,16 @@ def page(app: dict) -> str:
         notice = ""
         if app.get("notice"):
             notice = f'<p class="notice"><strong>{e(app["notice"][0])}</strong> — {e(app["notice"][1])}</p>'
-        extra += f'<section class="section"><div class="container"><h2>ทำอะไรได้บ้าง</h2><div class="cards">{cards}</div>{notice}</div></section>\n'
+        extra += f'<section class="section"><div class="container"><h2>What it does, in detail</h2><div class="cards">{cards}</div>{notice}</div></section>\n'
     if app.get("steps"):
         steps = "".join(f"<li><strong>{e(t)}</strong> — {e(d)}</li>\n" for t, d in app["steps"])
-        extra += f'<section class="section section-alt" id="how"><div class="container"><h2>เริ่มใช้งาน</h2><ol class="steps-list">{steps}</ol></div></section>\n'
+        extra += f'<section class="section section-alt" id="how"><div class="container"><h2>Getting started</h2><ol class="steps-list">{steps}</ol></div></section>\n'
     if app.get("changelog"):
         log = "".join(
             f"<h3>{e(t)}</h3><ul>" + "".join(f"<li>{e(b)}</li>" for b in bullets) + "</ul>\n"
             for t, bullets in app["changelog"]
         )
-        extra += f'<section class="section"><div class="container"><h2>อัปเดตล่าสุด</h2><div class="changelog">{log}</div></div></section>\n'
+        extra += f'<section class="section"><div class="container"><h2>Recent updates</h2><div class="changelog">{log}</div></div></section>\n'
     footnote = f'<p class="muted small">{e(app["footnote"])}</p>' if app.get("footnote") else ""
     return f"""<!doctype html>
 <html lang="en">
@@ -277,8 +301,9 @@ def page(app: dict) -> str:
   <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <script>(function(){{try{{var t=localStorage.getItem('fullrink-theme');if(t)document.documentElement.setAttribute('data-theme',t);}}catch(e){{}}}})();</script>
 </head>
 <body>
   <header class="site-header">
@@ -293,6 +318,7 @@ def page(app: dict) -> str:
         <a href="../#contact">Contact</a>
         <a href="{DEVELOPER_URL}" target="_blank" rel="noopener">AfterShoot</a>
         <a class="btn btn-small" href="../#apps">All apps</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark or light mode"><span class="moon" aria-hidden="true">&#9790;</span><span class="sun" aria-hidden="true">&#9728;</span></button>
       </nav>
     </div>
   </header>
@@ -353,7 +379,18 @@ def page(app: dict) -> str:
       <span class="muted small">&copy; <span id="year">2026</span> FullRink · <a href="{DEVELOPER_URL}" target="_blank" rel="noopener">AfterShoot</a>. All rights reserved. FullRink is the app brand of AfterShoot.</span>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('.theme-toggle').forEach(function (b) {{
+      b.addEventListener('click', function () {{
+        var r = document.documentElement;
+        var cur = r.getAttribute('data-theme') || 'dark';
+        var next = cur === 'light' ? 'dark' : 'light';
+        r.setAttribute('data-theme', next);
+        try {{ localStorage.setItem('fullrink-theme', next); }} catch (e) {{}}
+      }});
+    }});
+  </script>
 </body>
 </html>
 """

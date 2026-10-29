@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GameMap — FullRink</title>
+  <meta name="description" content="See the game from above. GameMap is a browser tool for hockey tracking: load a game clip, mark where each player is on a top-down rink as the video plays, and get movement dat">
+  <meta name="theme-color" content="#071628">
+  <meta property="og:title" content="GameMap — FullRink">
+  <meta property="og:description" content="See the game from above">
+  <meta property="og:image" content="https://fullrink.com/assets/logo/fullrink-mark-1200.png">
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>(function(){try{var t=localStorage.getItem('fullrink-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../" aria-label="FullRink home">
+        <img src="../assets/logo/fullrink-mark.svg" alt="" width="40" height="40">
+        <span class="brand-name">Full<span class="accent">Rink</span></span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="../#apps">Apps</a>
+        <a href="../#how">How it fits</a>
+        <a href="../#contact">Contact</a>
+        <a href="https://app.aftershoot.co.th/" target="_blank" rel="noopener">AfterShoot</a>
+        <a class="btn btn-small" href="../#apps">All apps</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark or light mode"><span class="moon" aria-hidden="true">&#9790;</span><span class="sun" aria-hidden="true">&#9728;</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero app-hero">
+      <div class="container">
+        <p class="eyebrow"><a href="../#apps">FullRink apps</a> / GameMap</p>
+        <div class="app-head">
+          <img class="app-icon" src="../assets/logo/fullrink-mark.svg" alt="" width="96" height="96">
+          <div>
+            <h1>GameMap</h1>
+            <p class="by">by FullRink · developed by <a href="https://app.aftershoot.co.th/" target="_blank" rel="noopener">AfterShoot</a></p>
+            <p class="lead">See the game from above</p>
+            
+          </div>
+        </div>
+        <p class="lead app-summary">GameMap is a browser tool for hockey tracking: load a game clip, mark where each player is on a top-down rink as the video plays, and get movement data back. Nothing to install, runs in the browser, works with the clips you already record with Live By or DejaVu Cam.</p>
+        <div class="hero-actions">
+<a class="btn" href="https://fullrink.com/gamemap/" target=_blank rel=noopener>Open GameMap</a>
+        </div>
+        <p class="muted small">Live on the web (early version, tracking lab).</p>
+        
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container app-grid">
+        <div>
+          <h2>What it does</h2>
+          <ul class="features">
+<li>Top-down rink view synced to your video</li>
+<li>Set up both teams, colours and players</li>
+<li>Mark real positions by hand, frame by frame</li>
+<li>Movement data for every player you track</li>
+<li>Runs in the browser, no install</li>
+          </ul>
+        </div>
+        <aside class="app-side">
+          <h3>Other FullRink apps</h3>
+          <nav class="app-nav" aria-label="FullRink apps">
+<a href="liveby">Live By</a>
+<a href="dejavucam">DejaVu Cam</a>
+<a href="mobilevar">Mobile VAR</a>
+<a href="analytic-cam">Analytic Cam</a>
+<a href="scoreboard">Live By Scoreboard</a>
+<a href="gamemap" aria-current=page>GameMap</a>
+          </nav>
+        </aside>
+      </div>
+    </section>
+
+    
+    <section class="section app-shots"><div class="container"><h2>Screens</h2><div class="shots"><figure><img src="../assets/apps/gamemap/gamemap-web.jpg" alt="GameMap in the browser" loading="lazy"><figcaption>GameMap in the browser</figcaption></figure>
+</div></div></section>
+
+    <section class="section cta">
+      <div class="container cta-box">
+        <h2>Questions about GameMap?</h2>
+        <p class="muted">Tell us what your rink needs, or ask to join the test.</p>
+        <div class="hero-actions">
+          <a class="btn" href="mailto:hello@fullrink.com?subject=GameMap">Contact us</a>
+          <a class="btn btn-ghost" href="../#apps">Back to all apps</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <span class="muted small">&copy; <span id="year">2026</span> FullRink · <a href="https://app.aftershoot.co.th/" target="_blank" rel="noopener">AfterShoot</a>. All rights reserved. FullRink is the app brand of AfterShoot.</span>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('.theme-toggle').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var r = document.documentElement;
+        var cur = r.getAttribute('data-theme') || 'dark';
+        var next = cur === 'light' ? 'dark' : 'light';
+        r.setAttribute('data-theme', next);
+        try { localStorage.setItem('fullrink-theme', next); } catch (e) {}
+      });
+    });
+  </script>
+</body>
+</html>

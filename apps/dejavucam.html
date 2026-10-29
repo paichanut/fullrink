@@ -14,8 +14,9 @@
   <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <script>(function(){try{var t=localStorage.getItem('fullrink-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
   <header class="site-header">
@@ -30,6 +31,7 @@
         <a href="../#contact">Contact</a>
         <a href="https://app.aftershoot.co.th/" target="_blank" rel="noopener">AfterShoot</a>
         <a class="btn btn-small" href="../#apps">All apps</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark or light mode"><span class="moon" aria-hidden="true">&#9790;</span><span class="sun" aria-hidden="true">&#9728;</span></button>
       </nav>
     </div>
   </header>
@@ -78,6 +80,7 @@
 <a href="mobilevar">Mobile VAR</a>
 <a href="analytic-cam">Analytic Cam</a>
 <a href="scoreboard">Live By Scoreboard</a>
+<a href="gamemap">GameMap</a>
           </nav>
         </aside>
       </div>
@@ -108,6 +111,17 @@
       <span class="muted small">&copy; <span id="year">2026</span> FullRink · <a href="https://app.aftershoot.co.th/" target="_blank" rel="noopener">AfterShoot</a>. All rights reserved. FullRink is the app brand of AfterShoot.</span>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('.theme-toggle').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var r = document.documentElement;
+        var cur = r.getAttribute('data-theme') || 'dark';
+        var next = cur === 'light' ? 'dark' : 'light';
+        r.setAttribute('data-theme', next);
+        try { localStorage.setItem('fullrink-theme', next); } catch (e) {}
+      });
+    });
+  </script>
 </body>
 </html>
