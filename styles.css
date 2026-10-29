@@ -167,3 +167,26 @@ p { margin: 0 0 1em; }
   .footer-grid { grid-template-columns: 1fr; }
   .card { padding: 22px; }
 }
+
+/* App pages */
+.app-hero .eyebrow a { color: var(--ice); }
+.app-head { display: flex; align-items: center; gap: 20px; margin-bottom: 16px; }
+.app-icon { width: 96px; height: 96px; border-radius: 24px; box-shadow: 0 16px 40px rgba(94, 200, 242, 0.2); }
+.app-head h1 { margin-bottom: 4px; }
+.app-head .lead { margin: 0; }
+.app-summary { max-width: 720px; }
+.app-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start; }
+.features { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.features li { padding: 14px 16px 14px 44px; position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); color: var(--text-2); }
+.features li::before { content: ""; position: absolute; left: 16px; top: 20px; width: 14px; height: 14px; border-radius: 50%; background: var(--ice); box-shadow: 0 0 0 4px rgba(94, 200, 242, 0.18); }
+.app-side h3 { font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.app-nav { display: flex; flex-direction: column; gap: 6px; }
+.app-nav a { padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--line); color: var(--text-2); }
+.app-nav a:hover { color: var(--text); background: var(--surface-2); }
+.app-nav a[aria-current="page"] { color: var(--bg); background: var(--ice); border-color: var(--ice); font-weight: 600; }
+.shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.shots figure { margin: 0; }
+.shots img { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); background: var(--bg-2); }
+.shots figcaption { margin-top: 8px; font-size: 0.85rem; color: var(--muted); text-align: center; }
+@media (max-width: 900px) { .app-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .app-head { flex-direction: column; align-items: flex-start; } .app-icon { width: 72px; height: 72px; } }
