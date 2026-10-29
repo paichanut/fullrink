@@ -40,49 +40,29 @@
   </header>
 
   <main>
-    <section class="hero">
-      <svg class="rink-bg" viewBox="0 0 1000 500" aria-hidden="true" focusable="false">
-        <rect x="20" y="20" width="960" height="460" rx="110" fill="none" stroke="currentColor" stroke-width="3"/>
-        <line x1="500" y1="20" x2="500" y2="480" stroke="#FF3B57" stroke-width="4"/>
-        <line x1="380" y1="20" x2="380" y2="480" stroke="#4C8DFF" stroke-width="4"/>
-        <line x1="620" y1="20" x2="620" y2="480" stroke="#4C8DFF" stroke-width="4"/>
-        <circle cx="500" cy="250" r="70" fill="none" stroke="#4C8DFF" stroke-width="3"/>
-        <circle cx="210" cy="140" r="70" fill="none" stroke="#FF3B57" stroke-width="3"/>
-        <circle cx="210" cy="360" r="70" fill="none" stroke="#FF3B57" stroke-width="3"/>
-        <circle cx="790" cy="140" r="70" fill="none" stroke="#FF3B57" stroke-width="3"/>
-        <circle cx="790" cy="360" r="70" fill="none" stroke="#FF3B57" stroke-width="3"/>
-        <line x1="95" y1="20" x2="95" y2="480" stroke="#FF3B57" stroke-width="2"/>
-        <line x1="905" y1="20" x2="905" y2="480" stroke="#FF3B57" stroke-width="2"/>
-        <path d="M95 215 a40 40 0 0 1 0 70" fill="none" stroke="#4C8DFF" stroke-width="3"/>
-        <path d="M905 215 a40 40 0 0 0 0 70" fill="none" stroke="#4C8DFF" stroke-width="3"/>
-      </svg>
-      <div class="container hero-grid">
-        <div>
+    <section class="hero hero-3d">
+      <div id="rink3d" class="r3" aria-label="Interactive 3D model of a hockey rink showing where each FullRink app is used"></div>
+      <div class="container hero-overlay">
+        <div class="r3-panel">
           <p class="eyebrow">FullRink · Apps for hockey rinks · by AfterShoot</p>
           <h1>Every game at your rink,<br>looking like a <span class="accent">broadcast</span></h1>
-          <p class="lead">Live streaming with the scoreboard on screen, score control from a second phone, instant replay, and skating analysis after the game. All on the Android phones you already have. No broadcast crew, no gear to buy, every feature free.</p>
+          <p class="lead">Live streaming with the scoreboard on screen, score control from a second phone, instant replay, and skating analysis after the game. On the Android phones you already have.</p>
           <div class="hero-actions">
             <a class="btn" href="mailto:hello@fullrink.com?subject=Demo at our rink">Book a demo at your rink</a>
             <a class="btn btn-ghost" href="#apps">See all 6 apps</a>
           </div>
-          <ul class="facts" aria-label="In short">
-            <li>1–2 phones</li><li>1 person on the score</li><li>Free, no watermark</li><li>Android</li>
-          </ul>
-        </div>
-        <div class="stage" aria-label="Real screens from the apps">
-          <figure class="tv">
-            <img src="assets/apps/liveby/overlay-bkkzeus.jpg" alt="BKK Zeus vs 3A scoreboard overlaid on a Live By stream" width="474" height="277">
-            <span class="live">LIVE</span>
-            <figcaption>Live By · scoreboard on a real stream</figcaption>
-          </figure>
-          <div class="phone a">
-            <img src="assets/apps/analytic-cam/screenshot-2-replay.jpg" alt="Analytic Cam showing a skater's skeleton with lean and knee angles" width="720" height="1280">
-            <span class="phone-label">Analytic Cam</span>
+          <div class="r3-controls" role="group" aria-label="3D rink views">
+            <button type="button" data-fly="overview" class="is-active">Overview</button>
+            <button type="button" data-fly="liveby">Live By</button>
+            <button type="button" data-fly="dejavucam">DejaVu Cam</button>
+            <button type="button" data-fly="mobilevar">Mobile VAR</button>
+            <button type="button" data-fly="analytic-cam">Analytic Cam</button>
+            <button type="button" data-fly="scoreboard">Scoreboard</button>
+            <button type="button" data-fly="gamemap">GameMap</button>
+            <button type="button" data-labels aria-pressed="true">Labels</button>
+            <button type="button" data-save>Save image</button>
           </div>
-          <div class="phone b">
-            <img src="assets/apps/dejavucam/store-3-replay.jpg" alt="DejaVu Cam replay screen" width="720" height="1440" loading="lazy">
-            <span class="phone-label">DejaVu Cam</span>
-          </div>
+          <p class="r3-hint">Drag to orbit · scroll or pinch to zoom · click a label to fly there</p>
         </div>
       </div>
     </section>
@@ -316,5 +296,7 @@
       });
     });
   </script>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+  <script type="module" src="assets/rink3d.js"></script>
 </body>
 </html>
