@@ -299,3 +299,19 @@ p { margin: 0 0 var(--s-16); }
 .r3-label.is-active { border-color: var(--secondary); background: var(--surface); }
 @media (max-width: 960px) { .r3 { height: 52vh; min-height: 340px; } }
 @media (max-width: 600px) { .r3-label span, .r3-label small { display: none; } .r3-label { padding: 2px 6px; } .r3-label b { grid-row: auto; padding: 0; } }
+
+/* Illustrated rink hero */
+.hero-map { padding: clamp(48px, 7vw, 96px) 0 clamp(40px, 5vw, 72px); }
+.hero-map .hero-grid { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); align-items: center; }
+.rink-figure { margin: 0; }
+.rinkmap { width: 100%; height: auto; display: block; }
+.rinkmap .pin { cursor: pointer; transition: transform .12s ease; }
+.rinkmap .pin:hover, .rinkmap .pin.is-hot { filter: drop-shadow(0 0 10px rgba(244,63,94,0.8)); }
+.rink-figure figcaption { margin-top: var(--s-12); color: var(--muted); text-align: center; }
+.rink-legend { list-style: none; margin: var(--s-16) 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.rink-legend a { display: grid; grid-template-columns: 34px 1fr; column-gap: var(--s-8); align-items: center; padding: var(--s-8) var(--s-12); background: var(--surface-2); color: var(--text); }
+.rink-legend a:hover, .rink-legend a.is-hot { background: var(--surface-3); color: var(--text); }
+.rink-legend b { font-family: var(--font-mono); font-size: var(--fs-12); color: var(--secondary); grid-row: 1 / 3; align-self: start; padding-top: 3px; }
+.rink-legend span { font-family: var(--font-display); font-weight: 900; font-size: var(--fs-14); line-height: 1.2; }
+.rink-legend small { display: block; color: var(--muted); font-size: var(--fs-12); line-height: 1.35; }
+@media (max-width: 960px) { .hero-map .hero-grid { grid-template-columns: 1fr; } .rink-legend { grid-template-columns: 1fr; } }
