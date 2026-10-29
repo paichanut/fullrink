@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 128" width="520" height="128" role="img" aria-label="FullRink logo">
+  <defs>
+    <linearGradient id="ice" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E2A47"/>
+      <stop offset="1" stop-color="#071628"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .w { font-family: "Space Grotesk", "Segoe UI", "Helvetica Neue", Arial, sans-serif; font-weight: 700; font-size: 60px; letter-spacing: -2px; }
+    .t { font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 3px; }
+  </style>
+  <!-- mark -->
+  <g transform="translate(0,0)">
+    <rect x="4" y="4" width="120" height="116" rx="28" fill="url(#ice)"/>
+    <rect x="18" y="30" width="92" height="64" rx="22" fill="none" stroke="#5EC8F2" stroke-width="5"/>
+    <line x1="46" y1="30" x2="46" y2="94" stroke="#5EC8F2" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+    <line x1="82" y1="30" x2="82" y2="94" stroke="#5EC8F2" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+    <line x1="64" y1="30" x2="64" y2="94" stroke="#FF3B57" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="64" cy="62" r="13" fill="#0B1B2B" stroke="#FF3B57" stroke-width="4"/>
+    <ellipse cx="64" cy="62" rx="5" ry="3.5" fill="#F5F8FB"/>
+  </g>
+  <!-- wordmark -->
+  <text x="148" y="74" class="w" fill="#F5F8FB">Full<tspan fill="#5EC8F2">Rink</tspan></text>
+  <text x="152" y="104" class="t" fill="#8FB3CC">SPORTS VIDEO &amp; LIVE SCORING</text>
+</svg>

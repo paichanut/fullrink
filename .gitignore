@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+.vercel
+.msys*
+
+# app source folders live here but are separate projects
+app/
