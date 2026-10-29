@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FullRink — แอปสำหรับลานฮอกกี้ โดย AfterShoot</title>
-  <meta name="description" content="FullRink คือชุดแอปสำหรับคนทำฮอกกี้และกีฬาบนลานน้ำแข็ง: Live By, DejaVu Cam, Mobile VAR, Analytic Cam และ Live By Scoreboard ไลฟ์สดพร้อมสกอร์บอร์ด บันทึกย้อนหลัง ดูภาพช้า วิเคราะห์ท่าสเก็ต ใช้ฟรี โดย AfterShoot">
-  <meta name="theme-color" content="#EEF2F5">
-  <meta property="og:title" content="FullRink — ทั้งลาน ในมือถือเครื่องเดียว">
-  <meta property="og:description" content="Live By, DejaVu Cam, Mobile VAR, Analytic Cam และ Live By Scoreboard แอปสำหรับลานฮอกกี้ โดย AfterShoot">
+  <meta name="description" content="FullRink คือชุดแอปสำหรับลานฮอกกี้และกีฬาบนลานน้ำแข็ง: Live By, DejaVu Cam, Mobile VAR, Analytic Cam, Live By Scoreboard และ GameMap ไลฟ์สดพร้อมสกอร์บอร์ด บันทึกย้อนหลัง ดูภาพช้า วิเคราะห์ท่าสเก็ต ใช้ฟรี โดย AfterShoot">
+  <meta name="theme-color" content="#070B12">
+  <meta property="og:title" content="FullRink — ทุกเกมในลานคุณ ดูเหมือนถ่ายทอดสด">
+  <meta property="og:description" content="Live By, DejaVu Cam, Mobile VAR, Analytic Cam, Live By Scoreboard และ GameMap แอปสำหรับลานฮอกกี้ โดย AfterShoot">
   <meta property="og:image" content="https://fullrink.com/assets/logo/fullrink-mark-1200.png">
   <meta property="og:type" content="website">
   <link rel="icon" href="favicon.ico" sizes="32x32">
@@ -15,8 +15,9 @@
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Thai:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>(function(){try{var t=localStorage.getItem('fullrink-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
   <a class="skip" href="#apps">ข้ามไปรายการแอป</a>
@@ -24,168 +25,208 @@
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="index.html" aria-label="FullRink หน้าแรก">
-        <img src="assets/logo/fullrink-mark.svg" alt="" width="34" height="34">
+        <img src="assets/logo/fullrink-mark.svg" alt="" width="36" height="36">
         <span class="brand-name">Full<span class="accent">Rink</span></span>
       </a>
       <nav aria-label="เมนูหลัก">
+        <a href="#owners">เจ้าของลาน</a>
         <a href="#apps">แอป</a>
         <a href="#matchday">วันแข่ง</a>
-        <a href="#dev">ผู้พัฒนา</a>
-        <a href="https://app.aftershoot.co.th/" target="_blank" rel="noopener">AfterShoot ↗</a>
-        <a class="btn btn-small" href="#apps">ดูแอปทั้งหมด</a>
+        <a href="https://app.aftershoot.co.th/" target="_blank" rel="noopener">AfterShoot</a>
+        <a class="btn btn-small" href="mailto:hello@fullrink.com?subject=นัดสาธิตที่ลาน">นัดสาธิต</a>
+        <button class="theme-toggle" type="button" aria-label="สลับโหมดมืด/สว่าง"><span class="moon" aria-hidden="true">☾</span><span class="sun" aria-hidden="true">☀</span></button>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="hero">
+      <svg class="rink-bg" viewBox="0 0 1000 500" aria-hidden="true" focusable="false">
+        <rect x="20" y="20" width="960" height="460" rx="110" fill="none" stroke="currentColor" stroke-width="3"/>
+        <line x1="500" y1="20" x2="500" y2="480" stroke="#FF3B57" stroke-width="4"/>
+        <line x1="380" y1="20" x2="380" y2="480" stroke="#4C8DFF" stroke-width="4"/>
+        <line x1="620" y1="20" x2="620" y2="480" stroke="#4C8DFF" stroke-width="4"/>
+        <circle cx="500" cy="250" r="70" fill="none" stroke="#4C8DFF" stroke-width="3"/>
+        <circle cx="210" cy="140" r="70" fill="none" stroke="#FF3B57" stroke-width="3"/>
+        <circle cx="210" cy="360" r="70" fill="none" stroke="#FF3B57" stroke-width="3"/>
+        <circle cx="790" cy="140" r="70" fill="none" stroke="#FF3B57" stroke-width="3"/>
+        <circle cx="790" cy="360" r="70" fill="none" stroke="#FF3B57" stroke-width="3"/>
+        <line x1="95" y1="20" x2="95" y2="480" stroke="#FF3B57" stroke-width="2"/>
+        <line x1="905" y1="20" x2="905" y2="480" stroke="#FF3B57" stroke-width="2"/>
+        <path d="M95 215 a40 40 0 0 1 0 70" fill="none" stroke="#4C8DFF" stroke-width="3"/>
+        <path d="M905 215 a40 40 0 0 0 0 70" fill="none" stroke="#4C8DFF" stroke-width="3"/>
+      </svg>
       <div class="container hero-grid">
         <div>
-          <p class="eyebrow">FullRink · ชุดแอปสำหรับลานฮอกกี้ · โดย <a href="https://app.aftershoot.co.th/" target="_blank" rel="noopener">AfterShoot</a></p>
+          <p class="eyebrow">FullRink · แอปสำหรับลานฮอกกี้ · โดย AfterShoot</p>
           <h1>ทุกเกมในลานคุณ<br>ดูเหมือน<span class="accent">ถ่ายทอดสด</span></h1>
-          <p class="lead">ไลฟ์สดพร้อมสกอร์บอร์ดบนภาพ คุมสกอร์จากมือถืออีกเครื่อง รีเพลย์ทันที และวิเคราะห์ท่าสเก็ตหลังเกม ทั้งหมดใช้มือถือ Android ที่มีอยู่แล้ว ไม่ต้องมีทีมถ่ายทอด ไม่ต้องซื้ออุปกรณ์ และใช้ฟรีทุกฟีเจอร์</p>
+          <p class="lead">ไลฟ์สดพร้อมสกอร์บอร์ดบนภาพ คุมสกอร์จากมือถืออีกเครื่อง รีเพลย์ทันที และวิเคราะห์ท่าสเก็ตหลังเกม ใช้มือถือ Android ที่มีอยู่แล้ว ไม่ต้องมีทีมถ่ายทอด ไม่ต้องซื้ออุปกรณ์ ใช้ฟรีทุกฟีเจอร์</p>
           <div class="hero-actions">
-            <a class="btn" href="#owners">สำหรับเจ้าของลาน</a>
-            <a class="link" href="#apps">ดูแอปทั้ง 5 ตัว</a>
+            <a class="btn" href="mailto:hello@fullrink.com?subject=นัดสาธิตที่ลาน">นัดสาธิตที่ลานของคุณ</a>
+            <a class="btn btn-ghost" href="#apps">ดูแอปทั้ง 6 ตัว</a>
           </div>
           <ul class="facts" aria-label="สรุป">
-            <li>มือถือ 1–2 เครื่อง</li><li>คนคุมสกอร์ 1 คน</li><li>ฟรี ไม่มีลายน้ำ</li><li>ใช้จริงแล้วในลีกที่กรุงเทพฯ</li>
+            <li>มือถือ 1–2 เครื่อง</li><li>คนคุมสกอร์ 1 คน</li><li>ฟรี ไม่มีลายน้ำ</li><li>Android</li>
           </ul>
         </div>
-        <div class="collage" aria-label="ภาพจากแอปจริง">
-          <span class="stamp">ภาพจริงจากแอป</span>
-          <figure class="wide">
+        <div class="stage" aria-label="ภาพจากแอปจริง">
+          <figure class="tv">
             <img src="assets/apps/liveby/overlay-bkkzeus.jpg" alt="สกอร์บอร์ด BKK Zeus พบ 3A ซ้อนบนภาพสตรีมของ Live By" width="474" height="277">
-            <figcaption>Live By — สกอร์บอร์ดซ้อนบนภาพสตรีมจริง BKK Zeus พบ 3A พีเรียด 1 นาที 7:19</figcaption>
+            <span class="live">LIVE</span>
+            <figcaption>Live By · สกอร์บอร์ดบนภาพสตรีมจริง</figcaption>
           </figure>
-          <figure class="tall">
-            <img src="assets/apps/dejavucam/store-1-capture.jpg" alt="หน้าจอบันทึกของ DejaVu Cam พร้อมปุ่ม DeJaVu" width="720" height="1440" loading="lazy">
-            <figcaption>DejaVu Cam — กดหลังเกิดเหตุ เก็บ 5 วินาทีสุดท้าย</figcaption>
-          </figure>
-          <figure class="tall">
-            <img src="assets/apps/analytic-cam/screenshot-2-replay.jpg" alt="Analytic Cam แสดงโครงร่างนักสเก็ตพร้อมมุมเอียงและมุมเข่า" width="720" height="1280" loading="lazy">
-            <figcaption>Analytic Cam — มุมเอียง 44° เข่าซ้าย 115° เข่าขวา 105°</figcaption>
-          </figure>
+          <div class="phone a">
+            <img src="assets/apps/analytic-cam/screenshot-2-replay.jpg" alt="Analytic Cam แสดงโครงร่างนักสเก็ตพร้อมมุมเอียงและมุมเข่า" width="720" height="1280">
+            <span class="phone-label">Analytic Cam</span>
+          </div>
+          <div class="phone b">
+            <img src="assets/apps/dejavucam/store-3-replay.jpg" alt="หน้ารีเพลย์ของ DejaVu Cam" width="720" height="1440" loading="lazy">
+            <span class="phone-label">DejaVu Cam</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <hr class="rule">
-
-    <section id="owners" class="section">
+    <section id="owners" class="section section-alt">
       <div class="container">
         <div class="section-head">
-          <h2>สำหรับเจ้าของลาน</h2>
-          <span class="mono">ลานได้อะไร ไม่ใช่แอปทำอะไรได้</span>
+          <p class="eyebrow">สำหรับเจ้าของลาน</p>
+          <h2>ลานได้อะไร ไม่ใช่แอปทำอะไรได้</h2>
         </div>
-        <div class="benefits">
+        <div class="pitch">
           <article>
-            <span class="num">01</span>
+            <div class="num">01</div>
             <h3>ทีมและลีกเลือกลานคุณ</h3>
-            <p>เกมที่มีไลฟ์ มีสกอร์บอร์ดบนจอ มีรีเพลย์ คือเกมที่ทีมอยากมาเล่น ลีกอยากมาจัด ลานที่ให้สิ่งนี้ได้ ไม่ต้องแข่งกันที่ราคาเช่าชั่วโมงอย่างเดียว</p>
+            <p>เกมที่มีไลฟ์ มีสกอร์บอร์ดบนจอ มีรีเพลย์ คือเกมที่ทีมอยากมาเล่น ลีกอยากมาจัด ไม่ต้องแข่งกันที่ราคาเช่าชั่วโมงอย่างเดียว</p>
           </article>
           <article>
-            <span class="num">02</span>
+            <div class="num">02</div>
             <h3>รายได้ใหม่จากสปอนเซอร์</h3>
-            <p>โลโก้สปอนเซอร์ซ้อนอยู่บนสตรีมทุกเกม ทุกนาที ขายเป็นแพ็กเกจรายฤดูกาลได้ ทั้งป้ายในสกอร์บอร์ดและโลโก้มุมจอ ใส่เองจากมือถือ</p>
+            <p>โลโก้สปอนเซอร์อยู่บนสตรีมทุกเกม ทุกนาที ขายเป็นแพ็กเกจรายฤดูกาลได้ ใส่เองจากมือถือ</p>
           </article>
           <article>
-            <span class="num">03</span>
-            <h3>คนดูเพิ่ม โดยไม่ต้องมาถึงลาน</h3>
-            <p>ผู้ปกครองดูลูกแข่งจากที่ทำงาน ทีมเยือนดูจากต่างจังหวัด ไลฟ์ออก YouTube และ Facebook ของลานพร้อมกัน ยอดวิวกลายเป็นตัวเลขที่เอาไปคุยกับสปอนเซอร์ได้</p>
+            <div class="num">03</div>
+            <h3>คนดูเพิ่ม ไม่ต้องมาถึงลาน</h3>
+            <p>ผู้ปกครองดูลูกแข่งจากที่ทำงาน ทีมเยือนดูจากต่างจังหวัด ไลฟ์ออก YouTube และ Facebook ของลานพร้อมกัน</p>
           </article>
           <article>
-            <span class="num">04</span>
+            <div class="num">04</div>
             <h3>ใช้คนเดียว ไม่ซื้ออุปกรณ์</h3>
-            <p>มือถือ Android กับขาตั้งหนึ่งชุดตั้งไว้มุมลาน คนคุมสกอร์กดจากมือถือตัวเองจากข้างสนาม ไม่มีสวิตเชอร์ ไม่มีสายกล้อง ไม่มีค่ารายเดือน</p>
+            <p>มือถือกับขาตั้งหนึ่งชุดตั้งไว้มุมลาน คนคุมสกอร์กดจากมือถือตัวเอง ไม่มีสวิตเชอร์ ไม่มีสายกล้อง ไม่มีค่ารายเดือน</p>
           </article>
         </div>
-        <div class="owner-cta">
+        <div class="demo">
           <div>
             <h3>นัดสาธิตที่ลานของคุณ</h3>
-            <p class="muted">เราไปตั้งให้ดูในเกมจริงหนึ่งเกม ใช้มือถือของเรา จะได้เห็นว่าภาพที่ออกไปหน้าตาเป็นยังไงกับลานของคุณเอง</p>
+            <p>เราไปตั้งให้ดูในเกมจริงหนึ่งเกม ใช้มือถือของเรา จะได้เห็นว่าภาพที่ออกไปหน้าตาเป็นยังไงกับลานของคุณเอง</p>
           </div>
           <a class="btn" href="mailto:hello@fullrink.com?subject=นัดสาธิตที่ลาน">นัดสาธิต</a>
         </div>
       </div>
     </section>
 
-    <hr class="rule rule-blue">
-
-    <section id="apps" class="section section-alt">
+    <section id="apps" class="section">
       <div class="container">
         <div class="section-head">
-          <h2>แอปทั้งหมด</h2>
-          <span class="mono">ตัวเลขคือลำดับ ไม่ใช่เบอร์เสื้อ</span>
+          <p class="eyebrow">แอปทั้ง 6 ตัว</p>
+          <h2>ทำทีละตัว ให้ใช้ด้วยกันได้</h2>
         </div>
-        <ul class="roster">
-          <li><a href="apps/liveby">
-            <span class="num">01</span>
-            <span class="name">Live By</span>
-            <p class="what">กล้องไลฟ์สดที่ใส่สกอร์บอร์ดฮอกกี้ลงในภาพ คุมสกอร์จากมือถืออีกเครื่อง ไลฟ์ออก YouTube Facebook และ RTMP พร้อมกัน</p>
-            <span class="tag">ทดสอบบน Google Play</span>
-            <span class="arrow" aria-hidden="true">→</span>
-          </a></li>
-          <li><a href="apps/dejavucam">
-            <span class="num">02</span>
-            <span class="name">DejaVu Cam</span>
-            <p class="what">กล้องบันทึกย้อนหลัง เกิดอะไรขึ้นค่อยกด แอปเก็บ 5 ถึง 30 วินาทีสุดท้ายให้เป็นคลิป ดูช้า ก้าวทีละเฟรม แชร์ได้เลย</p>
-            <span class="tag">ทดสอบบน Google Play</span>
-            <span class="arrow" aria-hidden="true">→</span>
-          </a></li>
-          <li><a href="apps/mobilevar">
-            <span class="num">03</span>
-            <span class="name">Mobile VAR</span>
-            <p class="what">ดูภาพช้าทีละเฟรม เทียบมุมกล้อง ตัดสินจังหวะประตูหรือจังหวะก้ำกึ่งจากข้างสนาม</p>
-            <span class="tag tag-dev">กำลังพัฒนา</span>
-            <span class="arrow" aria-hidden="true">→</span>
-          </a></li>
-          <li><a href="apps/analytic-cam">
-            <span class="num">04</span>
-            <span class="name">Analytic Cam</span>
-            <p class="what">วิเคราะห์ท่าสเก็ตจากคลิปในมือถือ มุมเอียง มุมเข่า สมดุล บนทุกเฟรม แล้วสรุปเป็นคะแนน ถ่ายช้า 240 fps ได้</p>
-            <span class="tag">ทดสอบบน Google Play</span>
-            <span class="arrow" aria-hidden="true">→</span>
-          </a></li>
-          <li><a href="apps/scoreboard">
-            <span class="num">05</span>
-            <span class="name">Live By Scoreboard</span>
-            <p class="what">สกอร์บอร์ดบนเบราว์เซอร์ เปิดได้ทุกจอ คุมจากที่ไหนก็ได้ หรือซ้อนลงบนสตรีม Live By</p>
-            <span class="tag tag-live">ใช้งานได้แล้ว</span>
-            <span class="arrow" aria-hidden="true">→</span>
-          </a></li>
-        </ul>
+        <div class="showcase">
+          <article class="show">
+            <div>
+              <div class="num">01 · LIVE BY</div>
+              <h3>กล้องไลฟ์สดที่มีสกอร์บอร์ดอยู่ในภาพ</h3>
+              <p>ไลฟ์ออก YouTube Facebook Instagram และ RTMP พร้อมกัน สกอร์บอร์ดฮอกกี้ซ้อนบนภาพ คนคุมสกอร์กดจากมือถือตัวเองผ่านเน็ต ซิงก์เวลากับบอร์ดจริงในลานได้ด้วยการส่องกล้อง</p>
+              <div class="actions"><a class="more" href="apps/liveby">ดูรายละเอียด Live By</a><span class="tag">ทดสอบบน Google Play</span></div>
+            </div>
+            <div class="show-media">
+              <span class="glow"></span>
+              <figure class="tv">
+                <img src="assets/apps/liveby/scoreboard-sync.jpg" alt="กล้อง Live By ส่องบอร์ดจริงในลานเพื่อซิงก์เวลา" width="514" height="314" loading="lazy">
+                <span class="live">SYNC</span>
+                <figcaption>ส่องกล้องไปที่บอร์ดในลาน แอปอ่านเวลาเอง</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="show">
+            <div>
+              <div class="num">02 · DEJAVU CAM</div>
+              <h3>เกิดอะไรขึ้นค่อยกด ได้คลิปย้อนหลังทันที</h3>
+              <p>แอปบันทึกลงหน่วยความจำตลอดเวลา พอมีประตู มีเซฟ มีชน กดปุ่มเดียว ได้คลิป 5 ถึง 30 วินาทีสุดท้าย ดูช้า ก้าวทีละเฟรม แชร์เข้ากลุ่มทีมได้เลย</p>
+              <div class="actions"><a class="more" href="apps/dejavucam">ดูรายละเอียด DejaVu Cam</a><span class="tag">ทดสอบบน Google Play</span></div>
+            </div>
+            <div class="show-media">
+              <span class="glow"></span>
+              <div class="phone"><img src="assets/apps/dejavucam/store-1-capture.jpg" alt="หน้าจอบันทึกของ DejaVu Cam" width="720" height="1440" loading="lazy"></div>
+            </div>
+          </article>
+
+          <article class="show">
+            <div>
+              <div class="num">03 · MOBILE VAR</div>
+              <h3>ตัดสินจังหวะก้ำกึ่งจากข้างสนาม</h3>
+              <p>ดูภาพช้าทีละเฟรม เทียบมุมกล้องหลายตัว ตรวจประตูหรือจังหวะที่ค้านได้ในมือถือ ไม่ต้องรอดูย้อนหลัง</p>
+              <div class="actions"><a class="more" href="apps/mobilevar">ดูรายละเอียด Mobile VAR</a><span class="tag tag-dev">กำลังพัฒนา</span></div>
+            </div>
+            <div class="show-media">
+              <div class="wip"><div><strong>กำลังพัฒนา</strong>เปิดให้ทดลองเร็วๆ นี้ ขอเข้าร่วมได้จากหน้าแอป</div></div>
+            </div>
+          </article>
+
+          <article class="show">
+            <div>
+              <div class="num">04 · ANALYTIC CAM</div>
+              <h3>วิเคราะห์ท่าสเก็ตจากคลิป ในมือถือ</h3>
+              <p>ถ่ายหรือดึงคลิปจากแกลเลอรี แอปจับโครงร่างบนทุกเฟรม แสดงมุมเอียง มุมเข่าซ้ายขวา และสมดุล แล้วสรุปเป็นคะแนน ถ่ายช้า 240 fps ได้ในเครื่องที่รองรับ</p>
+              <div class="actions"><a class="more" href="apps/analytic-cam">ดูรายละเอียด Analytic Cam</a><span class="tag">ทดสอบบน Google Play</span></div>
+            </div>
+            <div class="show-media">
+              <span class="glow"></span>
+              <div class="phone"><img src="assets/apps/analytic-cam/screenshot-3-report.jpg" alt="รายงานคะแนนของ Analytic Cam" width="720" height="1280" loading="lazy"></div>
+            </div>
+          </article>
+
+          <article class="show">
+            <div>
+              <div class="num">05 · LIVE BY SCOREBOARD</div>
+              <h3>สกอร์บอร์ดบนเบราว์เซอร์ เปิดได้ทุกจอ</h3>
+              <p>พีเรียด เวลา สกอร์ เพนัลตี้ อัปเดตสด เปิดบนจอในลาน แชร์ลิงก์ให้คนดู หรือซ้อนลงบนสตรีม Live By</p>
+              <div class="actions"><a class="more" href="apps/scoreboard">ดูรายละเอียด Scoreboard</a><a class="tag tag-live" href="https://livebyscoreboard.vercel.app/" target="_blank" rel="noopener">เปิดใช้งานได้เลย ↗</a></div>
+            </div>
+            <div class="show-media">
+              <span class="glow"></span>
+              <figure class="tv">
+                <img src="assets/apps/scoreboard/scoreboard-web.jpg" alt="Live By Scoreboard บนเบราว์เซอร์" width="1280" height="720" loading="lazy">
+                <figcaption>livebyscoreboard.vercel.app</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="show">
+            <div>
+              <div class="num">06 · GAMEMAP</div>
+              <h3>เห็นเกม ในอีกมุมมอง</h3>
+              <p>เปิดคลิปเกมในเบราว์เซอร์ แล้วจุดตำแหน่งผู้เล่นบนแผนผังลานมองจากด้านบนตามวิดีโอ ได้ข้อมูลการเคลื่อนที่ของแต่ละคนกลับมา ใช้กับคลิปจาก Live By หรือ DejaVu Cam ได้เลย</p>
+              <div class="actions"><a class="more" href="apps/gamemap">ดูรายละเอียด GameMap</a><a class="tag tag-live" href="gamemap/">เปิดใช้งานได้เลย ↗</a></div>
+            </div>
+            <div class="show-media">
+              <span class="glow"></span>
+              <figure class="tv">
+                <img src="assets/apps/gamemap/gamemap-web.jpg" alt="GameMap แผนผังลานมองจากด้านบนพร้อมวิดีโอ" width="1280" height="720" loading="lazy">
+                <figcaption>fullrink.com/gamemap</figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section">
+    <section id="matchday" class="section section-alt">
       <div class="container">
         <div class="section-head">
-          <h2>หน้าจอจริง</h2>
-          <span class="mono">ไม่ใช่ภาพจำลอง</span>
-        </div>
-        <div class="strip">
-          <figure>
-            <img src="assets/apps/dejavucam/store-3-replay.jpg" alt="หน้ารีเพลย์ของ DejaVu Cam" width="720" height="1440" loading="lazy">
-            <figcaption>DejaVu Cam — รีเพลย์ ก้าวทีละเฟรม</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/apps/analytic-cam/screenshot-3-report.jpg" alt="รายงานคะแนนของ Analytic Cam" width="720" height="1280" loading="lazy">
-            <figcaption>Analytic Cam — รายงานคะแนนหลังดูคลิป</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/apps/liveby/scoreboard-sync.jpg" alt="กล้อง Live By ส่องบอร์ดจริงในลานเพื่อซิงก์เวลา" width="514" height="314" loading="lazy">
-            <figcaption>Live By — ส่องกล้องไปที่บอร์ดในลาน แอปอ่านเวลาเอง นาฬิกาบนภาพเดินตรงกับสนาม</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section id="matchday" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>วันแข่ง ใช้ยังไง</h2>
-          <span class="mono">ตัวอย่างการใช้ทั้งชุดในเกมเดียว</span>
+          <p class="eyebrow">วันแข่ง</p>
+          <h2>ใช้ทั้งชุดในเกมเดียว</h2>
         </div>
         <div class="matchday">
           <div>
@@ -217,14 +258,13 @@
       </div>
     </section>
 
-    <hr class="rule rule-blue">
-
-    <section id="dev" class="section section-alt">
+    <section id="dev" class="section">
       <div class="container dev">
         <div>
-          <h2>ใครทำ</h2>
-          <p>FullRink คือชื่อรวมของแอปกีฬาจาก <strong>AfterShoot</strong> ผู้พัฒนาเครื่องมือวิดีโอในไทย แอปทุกตัวเริ่มจากความต้องการในลานจริง ทำทีละตัว แล้วค่อยต่อให้ใช้ด้วยกันได้ ตอนนี้ยังอยู่ในช่วงทดสอบบน Google Play ขอเข้าร่วมได้จากหน้าของแต่ละแอป</p>
-          <p>อยากได้อะไรเพิ่ม หรือลานของคุณใช้ต่างจากนี้ เขียนมาเล่าได้ ทุกฟีเจอร์ที่มีอยู่ก็มาจากคนใช้จริงแบบนี้</p>
+          <p class="eyebrow">ใครทำ</p>
+          <h2>FullRink โดย AfterShoot</h2>
+          <p>FullRink คือชื่อรวมของแอปกีฬาจาก AfterShoot ผู้พัฒนาเครื่องมือวิดีโอในไทย แอปทุกตัวเริ่มจากความต้องการในลานจริง ทำทีละตัว แล้วค่อยต่อให้ใช้ด้วยกันได้ ตอนนี้อยู่ในช่วงทดสอบบน Google Play ขอเข้าร่วมได้จากหน้าของแต่ละแอป</p>
+          <p>อยากได้อะไรเพิ่ม หรือลานของคุณใช้ต่างจากนี้ เขียนมาเล่าได้ ฟีเจอร์ที่มีอยู่ก็มาจากคนใช้จริงแบบนี้</p>
         </div>
         <div class="links">
           <a href="https://app.aftershoot.co.th/" target="_blank" rel="noopener">app.aftershoot.co.th <small>เว็บผู้พัฒนา แอปและเครื่องมืออื่นของ AfterShoot</small></a>
@@ -239,7 +279,7 @@
     <div class="container footer-grid">
       <div>
         <a class="brand" href="index.html" aria-label="FullRink หน้าแรก">
-          <img src="assets/logo/fullrink-mark.svg" alt="" width="34" height="34">
+          <img src="assets/logo/fullrink-mark.svg" alt="" width="36" height="36">
           <span class="brand-name">Full<span class="accent">Rink</span></span>
         </a>
         <p class="muted small" style="margin-top:10px">แอปสำหรับลานฮอกกี้และกีฬาบนลานน้ำแข็ง<br>FullRink เป็นแบรนด์แอปของ <a href="https://app.aftershoot.co.th/" target="_blank" rel="noopener">AfterShoot</a></p>
@@ -251,6 +291,7 @@
         <a href="apps/mobilevar">Mobile VAR</a>
         <a href="apps/analytic-cam">Analytic Cam</a>
         <a href="apps/scoreboard">Live By Scoreboard</a>
+        <a href="apps/gamemap">GameMap</a>
       </nav>
       <nav aria-label="บริษัท" class="footer-col">
         <h4>ผู้พัฒนา</h4>
@@ -263,6 +304,17 @@
       © <span id="year">2026</span> FullRink · AfterShoot · ทำในประเทศไทย
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('.theme-toggle').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var r = document.documentElement;
+        var cur = r.getAttribute('data-theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        var next = cur === 'light' ? 'dark' : 'light';
+        r.setAttribute('data-theme', next);
+        try { localStorage.setItem('fullrink-theme', next); } catch (e) {}
+      });
+    });
+  </script>
 </body>
 </html>

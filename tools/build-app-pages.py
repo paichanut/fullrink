@@ -183,6 +183,32 @@ APPS = [
         "shots": [],
         "status": "Live on the web.",
     },
+    {
+        "slug": "gamemap",
+        "name": "GameMap",
+        "tagline": "See the game from above",
+        "icon": "../assets/logo/fullrink-mark.svg",
+        "summary": (
+            "GameMap is a browser tool for hockey tracking: load a game clip, mark where each player is on a top-down rink "
+            "as the video plays, and get movement data back. Nothing to install, runs in the browser, works with the clips "
+            "you already record with Live By or DejaVu Cam."
+        ),
+        "features": [
+            "Top-down rink view synced to your video",
+            "Set up both teams, colours and players",
+            "Mark real positions by hand, frame by frame",
+            "Movement data for every player you track",
+            "Runs in the browser, no install",
+        ],
+        "links": [
+            {"label": "Open GameMap", "href": "https://fullrink.com/gamemap/", "primary": True},
+        ],
+        "shots": [
+            ("../assets/apps/gamemap/gamemap-web.jpg", "GameMap in the browser"),
+        ],
+        "status": "Live on the web (early version, tracking lab).",
+        "th_tagline": "เห็นเกม ในอีกมุมมอง",
+    },
 ]
 
 NAV_ORDER = [a["slug"] for a in APPS]
@@ -277,8 +303,9 @@ def page(app: dict) -> str:
   <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Thai:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <script>(function(){{try{{var t=localStorage.getItem('fullrink-theme');if(t)document.documentElement.setAttribute('data-theme',t);}}catch(e){{}}}})();</script>
 </head>
 <body>
   <header class="site-header">
@@ -293,6 +320,7 @@ def page(app: dict) -> str:
         <a href="../#contact">Contact</a>
         <a href="{DEVELOPER_URL}" target="_blank" rel="noopener">AfterShoot</a>
         <a class="btn btn-small" href="../#apps">All apps</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark or light mode"><span class="moon" aria-hidden="true">&#9790;</span><span class="sun" aria-hidden="true">&#9728;</span></button>
       </nav>
     </div>
   </header>
@@ -353,7 +381,18 @@ def page(app: dict) -> str:
       <span class="muted small">&copy; <span id="year">2026</span> FullRink · <a href="{DEVELOPER_URL}" target="_blank" rel="noopener">AfterShoot</a>. All rights reserved. FullRink is the app brand of AfterShoot.</span>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('.theme-toggle').forEach(function (b) {{
+      b.addEventListener('click', function () {{
+        var r = document.documentElement;
+        var cur = r.getAttribute('data-theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        var next = cur === 'light' ? 'dark' : 'light';
+        r.setAttribute('data-theme', next);
+        try {{ localStorage.setItem('fullrink-theme', next); }} catch (e) {{}}
+      }});
+    }});
+  </script>
 </body>
 </html>
 """
