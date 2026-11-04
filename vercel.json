@@ -2,7 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/app/gamemap", "destination": "/gamemap/index.html" }
+    { "source": "/app/gamemap", "destination": "/gamemap" }
   ],
   "headers": [
     {
