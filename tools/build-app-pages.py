@@ -188,24 +188,25 @@ APPS = [
         "tagline": "See the game from above",
         "icon": "../assets/logo/fullrink-mark.svg",
         "summary": (
-            "GameMap is a browser tool for hockey tracking: load a game clip, mark where each player is on a top-down rink "
-            "as the video plays, and get movement data back. Nothing to install, runs in the browser, works with the clips "
-            "you already record with Live By or DejaVu Cam."
+            "GameMap is a free browser demo for hockey tracking: open a game clip and AI finds the players, splits the two "
+            "teams and the referees, and puts everyone on a top-down rink as the video plays. The analysis runs on your "
+            "device and the video is never uploaded. Works with the clips you already record with Live By or DejaVu Cam."
         ),
         "features": [
             "Top-down rink view synced to your video",
-            "Set up both teams, colours and players",
-            "Mark real positions by hand, frame by frame",
-            "Movement data for every player you track",
-            "Runs in the browser, no install",
+            "Player detection that runs on your device (GPU when the browser allows it), nothing uploaded",
+            "Teams split by jersey colour, referees found by their striped shirts",
+            "Camera calibration from rink landmarks you click",
+            "Heat map and movement data (JSON export) for every tracked player",
+            "Free, no account, no install",
         ],
         "links": [
-            {"label": "Open GameMap", "href": "https://fullrink.com/gamemap/", "primary": True},
+            {"label": "Open the GameMap demo", "href": "../gamemap", "primary": True},
         ],
         "shots": [
             ("../assets/apps/gamemap/gamemap-web.jpg", "GameMap in the browser"),
         ],
-        "status": "Live on the web (early version, tracking lab).",
+        "status": "Free browser demo, live on the web. The analysis runs on your device.",
     },
 ]
 
