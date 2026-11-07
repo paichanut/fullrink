@@ -2,12 +2,32 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/app/gamemap", "destination": "/gamemap" }
+    {
+      "source": "/app/gamemap",
+      "destination": "/gamemap"
+    }
   ],
   "headers": [
     {
       "source": "/assets/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/console",
+      "destination": "https://console.fullrink.com/",
+      "permanent": true
+    },
+    {
+      "source": "/console/:path*",
+      "destination": "https://console.fullrink.com/:path*",
+      "permanent": true
     }
   ]
 }
